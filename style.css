@@ -1,0 +1,2641 @@
+html {
+    scroll-behavior: smooth; /* Включает плавное скроллирование */
+}
+
+/* Компенсация высоты фиксированной шапки (95px) при скролле к блоку */
+[id] {
+    scroll-margin-top: 95px; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #E6E4E0;
+}
+
+.header {
+    position: fixed; /* Фиксирует элемент относительно экрана */
+    top: 0;          /* Прижимает к самому верху */
+    left: 50%;       /* Вместе с transform центрирует фиксированный блок */
+    transform: translateX(-50%);
+    z-index: 1000;   /* Поверх остальных элементов страницы */
+    
+    width: 100%;
+    max-width: 1512px;
+    height: 95px;
+    background-color: #E6E4E0;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.headernad {
+    width: 100%; /* Растягивает блок на всю ширину экрана */
+    max-width: 100%; /* Гарантирует, что блок не будет ограничен */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px; /* Немного увеличили боковые отступы */
+    box-sizing: border-box;
+    font-size: 22px; /* Увеличили размер текста (подстрой под себя, если нужно больше/меньше) */
+}
+
+nav {
+    display: flex;
+    gap: 40px; 
+    margin-left: -30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.LegalPartner {
+    height: 42px;
+    object-fit: contain;
+}
+
+.headernad p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    cursor: pointer;
+}
+
+.golovniecran {
+    width: 100%;
+    max-width: 1512px;
+    height: 964px; 
+    margin: 0 auto;
+    background-image: url("images/aa9f29983ad1bdce9ab03c9b58364e4d6dd6c0c4.jpg");
+    background-size: cover;        
+    background-position: center;    
+    background-repeat: no-repeat;   
+    display: flex; 
+    align-items: stretch; 
+}
+
+.steclofon-left {
+    width: 776px; 
+    background: rgba(28, 38, 40, 0.4); 
+    backdrop-filter: blur(10px); 
+    padding: 138px 45px 60px 45px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 1.4;
+    color: #E6E4E0;
+    margin: -40px 0 24px 0;
+}
+
+.textgol {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1.2;
+    color: #E6E4E0;
+    margin: 0 0 40px 0;
+    text-align: justify;
+}
+
+.button1 {
+    width: 690px;
+    height: 99px;
+    background-color: rgba(217, 217, 217, 0.4); 
+    border-radius: 30px;
+    border: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Прижимаем к низу только внутри стелофона на ПК */
+.steclofon-left .button1 {
+    margin-top: auto;
+}
+
+.button1:hover {
+    transform: translateY(-4px);
+    background-color: rgba(217, 217, 217, 0.6);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Адаптив для планшетов и мобилок */
+@media (max-width: 1024px) {
+    .golovniecran {
+        height: auto !important; /* Принудительно убираем 964px */
+        min-height: auto;
+    }
+
+    .steclofon-left {
+        width: 100% !important;
+        padding: 40px 20px !important;
+    }
+
+    .title {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+        margin: 0 0 16px 0 !important;
+    }
+
+    .textgol {
+        font-size: 18px !important;
+        line-height: 1.4 !important;
+        margin: 0 0 24px 0 !important;
+        text-align: left !important;
+    }
+
+    .steclofon-left .button1,
+    .button1 {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 56px !important;
+        font-size: 18px !important;
+        margin-top: 0 !important; /* Убираем auto отступ полностью */
+    }
+}
+
+.bloc2 {
+    width: 100%;
+    max-width: 1512px;
+    margin: 0 auto;
+    background-color: #E6E4E0;
+    padding-bottom: 0;
+}
+
+.vverxbloc2 {
+    width: 100%;
+    height: 241px;
+    background-image: linear-gradient(rgba(217, 217, 217, 0.5), rgba(217, 217, 217, 0.5)), url("images/bf6f764102cc11fe2b780e387447af18e872fdb0(2).jpg");
+    background-size: cover;        
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.vverxbloc1 {
+    width: 100%;
+    height: 241px;
+    background-image: linear-gradient(rgba(217, 217, 217, 0.5), rgba(217, 217, 217, 0.5)), url("images/bf6f764102cc11fe2b780e387447af18e872fdb0(1).jpg");
+    background-size: cover;        
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.textbloc2 {
+    max-width: 1170px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.3;
+    color: #000;
+    margin: 0;
+}
+
+.blocin2bloc {
+    max-width: 1420px;
+    margin: 60px auto 0 auto;   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px; 
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.card-item {
+    width: 100%;
+}
+
+.card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 32px;
+    margin: 0 0 15px 0;
+    color: #000;
+}
+
+.card-content {
+    width: 100%;
+    min-height: 240px;
+    background-color: rgba(58, 58, 58, 0.8); 
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 30px; 
+    box-sizing: border-box;
+}
+
+.card-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: left;
+}
+
+.vverxbloc3 {
+    width: 100%;
+    height: 241px;
+    margin-top: 80px;
+    background-image: linear-gradient(rgba(217, 217, 217, 0.5), rgba(217, 217, 217, 0.5)), url("images/bf6f764102cc11fe2b780e387447af18e872fdb0(2).jpg");
+    background-size: cover;        
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonbloc2 {
+    width: 686px;
+    height: 99px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(58, 58, 58, 0.6); 
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttonbloc2:hover {
+    transform: translateY(-4px);
+    background: rgba(58, 58, 58, 0.8);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.bloc3 {
+    width: 100%;
+    max-width: 1512px;
+    margin: 0 auto;
+    background-color: #3A3A3A; 
+    padding: 80px 45px;
+    box-sizing: border-box;
+    color: #E6E4E0;
+}
+
+.title-bloc3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 60px 0;
+}
+
+.content-bloc3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.left-col3 {
+    width: 691px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.step-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    border: 1px solid #E6E4E0;
+    background-color: #E6E4E0;
+    color: #000;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.step-text h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+}
+
+.step-text p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.right-col3 {
+    width: 691px;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.arrow-down {
+    font-size: 28px;
+    background-color: #E6E4E0;
+    color: #000;
+    border-radius: 50px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.result-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.result-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 25px 0;
+}
+
+.result-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500; 
+    font-size: 24px; 
+    line-height: 1.3;
+    color: #E6E4E0;
+    margin: 0 0 30px 0;
+    text-align: justify;
+}
+
+
+.right-col3 .button1 {
+    margin-top: auto;
+    background-color: rgba(217, 217, 217, 0.4);
+    color: #000;
+}
+
+.right-col3 .button1:hover {
+    background-color: rgba(217, 217, 217, 0.6);
+}
+
+.bloc4 {
+    width: 100%;
+    max-width: 1512px;
+    margin: 50px auto 0;
+    background-color: #E6E4E0;
+    box-sizing: border-box;
+    padding: 70px 50px 50px;
+}
+
+.title-bloc4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    color: #000;
+    margin: 0 auto 70px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.cases-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Верхнє вирівнювання дозволяє підняти центр */
+    gap: 40px;
+}
+
+/* Звичайні бічні картки */
+.case-item {
+    flex: 1;
+    max-width: 420px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px; /* Зсуваємо бічні картки трохи нижче */
+}
+
+/* Стандартні фото (300px) */
+.case-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+/* ЦЕНТРАЛЬНА КАРТКА (Олександр Рябець) */
+.case-item-center {
+    margin-top: 0; /* Вище ніж бічні */
+    transform: translateY(-25px); /* Піднімаємо вгору */
+    z-index: 2;
+}
+
+/* БІЛЬШИЙ КРУЖОЧЕК ДЛЯ ЦЕНТРУ (360px) */
+.case-img-large {
+    width: 360px;
+    height: 360px;
+    border: 3px solid #000; /* Елегантна рамка для підкреслення статусу */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* М'яка тінь */
+}
+
+/* Імена та тексти */
+.lawyer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    margin: 20px 0 5px 0;
+    width: 100%;
+}
+
+.case-signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 600;
+    color: #444;
+    margin: 0 0 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.case-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.3;
+    color: #000;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.case-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.45;
+    color: #000;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.case-result {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 1.45;
+    color: #000;
+    text-align: left;
+    width: 100%;
+}
+
+/* Адаптивність для екранів планшетів/мобільних */
+@media (max-width: 1024px) {
+    .cases-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .case-item,
+    .case-item-center {
+        margin-top: 0;
+        transform: none;
+        max-width: 500px;
+        margin-bottom: 50px;
+    }
+
+    .case-img-large {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+
+
+
+
+.bloc5 {
+    width: 100%;
+    max-width: 1512px;
+    margin: 0 auto;
+    background-color: #3A3A3A;
+    padding: 80px 0 100px;
+    box-sizing: border-box;
+    color: #E6E4E0;
+}
+
+.title-bloc5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px; /* Збільшено з 50px */
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.rates-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.rate-column {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rate-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.rate-num {
+    background-color: #E6E4E0;
+    color: #000;
+    border-radius: 50%;
+    width: 50px; /* Трохи збільшено розмір кружечка */
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px; /* Додано розмір шрифту */
+    flex-shrink: 0;
+}
+
+.rate-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px; /* Збільшено з 32px */
+    font-weight: bold;
+    margin: 0;
+}
+
+.rate-subtitle {
+    font-size: 21px; /* Збільшено з 16px */
+    line-height: 1.45;
+    opacity: 0.85;
+    margin-bottom: 20px;
+    min-height: 75px; /* Трохи збільшено вирівнювальну висоту */
+}
+
+/* Загальні стилі для білих картка */
+.rate-card {
+    background-color: #E6E4E0;
+    border-radius: 28px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    box-sizing: border-box;
+}
+
+/* Ліва картка */
+.rate-card.card-small {
+    padding: 35px 30px;
+}
+
+/* Права картка */
+.rate-card.card-large {
+    padding: 45px 35px;
+}
+
+.content-label {
+    font-weight: bold;
+    font-size: 27px; /* Збільшено з 19px */
+    margin-bottom: 14px;
+}
+
+.rate-content ul {
+    margin: 0 0 25px 0;
+    padding-left: 20px;
+}
+
+.rate-content li {
+    margin-bottom: 12px;
+    font-size: 25px; /* Збільшено з 15px */
+    line-height: 1.5;
+}
+
+.rate-result {
+    padding-top: 18px;
+    border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.rate-result p {
+    font-size: 25px; /* Збільшено з 15px */
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Адаптивність для планшетів та смартфонів */
+@media (max-width: 900px) {
+    .rates-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .rate-column {
+        max-width: 100%;
+        width: 100%;
+    }
+    .rate-subtitle {
+        min-height: auto;
+    }
+}
+
+
+
+
+
+.bloc6 {
+    width: 100%;
+    max-width: 1512px;
+    margin: 0 auto;
+    background-color: #E6E4E0; 
+    padding: 80px 0 100px 0;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+.title-bloc6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto 50px auto;
+}
+
+.contacts-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px; 
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/* Левая колонка */
+.contacts-left {
+    flex: 1;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.contact-item a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #000000;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.contact-item a:hover {
+    opacity: 0.7;
+}
+
+.contact-photo-wrapper {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+.contacts-right {
+    flex: 1;
+    max-width: 550px;
+}
+
+.form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1.5px solid #3A3A3A;
+    border-radius: 15px; 
+    background-color: transparent;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: #000000;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #000000;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.form-submit-btn {
+    margin-top: 10px;
+    background-color: #3A3A3A; 
+    color: #E6E4E0;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-submit-btn:hover {
+    background-color: #222222;
+}
+
+
+@media (max-width: 992px) {
+    .contacts-container {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+    .contacts-left, .contacts-right {
+        max-width: 100%;
+        width: 100%;
+    }
+    .contact-photo-wrapper {
+        margin: 0 auto;
+    }
+}
+
+
+.footer-bottom-bar {
+  background-color: #313131; 
+  width: 100%;
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+}
+
+.logo-text {
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.logo-img {
+  height: 97px; 
+  width: 726px;
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .headernad {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-left: 0;
+    }
+
+    /* HERO */
+    .steclofon-left {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .textgol {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .button1 {
+        width: 100%;
+        font-size: 20px;
+        height: 70px;
+    }
+
+    /* BLOK 2 */
+    .blocin2bloc {
+        grid-template-columns: 1fr;
+    }
+
+    .card-content {
+        min-height: auto;
+    }
+
+    /* BLOK 3 */
+    .content-bloc3 {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .left-col3,
+    .right-col3 {
+        width: 100%;
+    }
+
+    /* BLOK 4 */
+    .cases-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .case-item {
+        width: 100%;
+    }
+
+    /* BLOK 5 */
+    .rates-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rate-column {
+        max-width: 100%;
+    }
+
+    /* FOOTER LOGO */
+    .logo-img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .header {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .headernad {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .LegalPartner {
+        height: 35px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .golovniecran {
+        height: auto;
+        min-height: 600px;
+        flex-direction: column;
+    }
+
+    .steclofon-left {
+        width: 100%;
+        padding: 40px 20px;
+        backdrop-filter: blur(6px);
+    }
+
+    .title {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .textgol {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 25px;
+        text-align: left;
+    }
+
+    .button1 {
+        width: 100%;
+        height: 60px;
+        font-size: 18px;
+        border-radius: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .vverxbloc1,
+    .vverxbloc2 {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .textbloc2 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .blocin2bloc {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .card-title {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .card-content {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .card-text {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .buttonbloc2 {
+        width: 100%;
+        height: 60px;
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .bloc3 {
+        padding: 40px 20px;
+    }
+
+    .title-bloc3 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    .content-bloc3 {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .left-col3,
+    .right-col3 {
+        width: 100%;
+    }
+
+    .step-item {
+        gap: 12px;
+    }
+
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .step-text h3 {
+        font-size: 18px;
+    }
+
+    .step-text p {
+        font-size: 14px;
+    }
+
+    .result-header h3 {
+        font-size: 20px;
+    }
+
+    .result-title {
+        font-size: 18px;
+    }
+
+    .result-desc {
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .bloc4 {
+        padding: 40px 20px;
+    }
+
+    .title-bloc4 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    .cases-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .case-item {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .case-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .case-name {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .case-text,
+    .case-result {
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .bloc5 {
+        padding: 50px 20px;
+    }
+
+    .title-bloc5 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    .rates-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: stretch;
+    }
+
+    .rate-column {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .rate-header h3 {
+        font-size: 20px;
+    }
+
+    .rate-num {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .rate-subtitle {
+        font-size: 14px;
+        min-height: auto;
+        margin-bottom: 15px;
+    }
+
+    .rate-card {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .rate-content {
+        font-size: 14px;
+    }
+
+    .rate-content ul {
+        padding-left: 18px;
+    }
+
+    .rate-content li {
+        margin-bottom: 6px;
+    }
+
+    .rate-result {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .bloc6 {
+        padding: 50px 20px;
+    }
+
+    .title-bloc6 {
+        font-size: 28px;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .contacts-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0;
+    }
+
+    .contacts-left,
+    .contacts-right {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-item {
+        gap: 12px;
+    }
+
+    .contact-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .contact-item a {
+        font-size: 16px;
+        word-break: break-word;
+    }
+
+    .contact-photo-wrapper {
+        max-width: 100%;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+        padding: 10px 14px;
+    }
+
+    .form-submit-btn {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
+/* ==========================================
+   ЕДИНЫЙ АДАПТИВ ДЛЯ МОБИЛЬНЫХ (до 768px)
+   ========================================== */
+@media (max-width: 768px) {
+
+    /* 1. ОБЩИЕ СБРОСЫ И ОГРАНИЧЕНИЯ */
+    body {
+        overflow-x: hidden; /* Предотвращает горизонтальную прокрутку */
+    }
+
+    [id] {
+        scroll-margin-top: 70px; /* Уменьшаем отступ под мобильную шапку */
+    }
+
+    /* 2. ШАПКА (HEADER) */
+    .header {
+        height: auto;
+        padding: 10px 0;
+        position: fixed;
+    }
+
+    .headernad {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 15px;
+    }
+
+    .LegalPartner {
+        height: 32px;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-left: 0;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    /* 3. ГЛАВНЫЙ ЭКРАН (HERO) */
+    .golovniecran {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 80px; /* Компенсация высоты шапки */
+    }
+
+    .steclofon-left {
+        width: 100%;
+        padding: 30px 20px;
+        backdrop-filter: blur(8px);
+    }
+
+    .title {
+        font-size: 36px;
+        line-height: 1.2;
+        margin: 0 0 15px 0;
+    }
+
+    .textgol {
+        font-size: 18px;
+        line-height: 1.4;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .button1 {
+        width: 100%;
+        height: 60px;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+
+    /* 4. БЛОК 2 (КАРТОЧКИ И ЗАГОЛОВКИ) */
+    .vverxbloc1,
+    .vverxbloc2,
+    .vverxbloc3 {
+        height: auto;
+        padding: 30px 15px;
+        margin-top: 0;
+    }
+
+    .textbloc2 {
+        font-size: 20px;
+        line-height: 1.35;
+    }
+
+    .blocin2bloc {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+
+    .card-title {
+        font-size: 22px;
+    }
+
+    .card-content {
+        padding: 20px;
+        min-height: auto;
+        border-radius: 20px;
+    }
+
+    .card-text {
+        font-size: 16px;
+    }
+
+    .buttonbloc2 {
+        width: 100%;
+        height: 60px;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+
+    /* 5. БЛОК 3 (ЭТАПЫ / ПРОЦЕСС) */
+    .bloc3 {
+        padding: 40px 15px;
+    }
+
+    .title-bloc3 {
+        font-size: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .content-bloc3 {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .left-col3,
+    .right-col3 {
+        width: 100%;
+    }
+
+    .step-item {
+        gap: 15px;
+    }
+
+    .step-number {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .step-text h3 {
+        font-size: 20px;
+    }
+
+    .step-text p {
+        font-size: 15px;
+    }
+
+    .result-header h3,
+    .result-title {
+        font-size: 20px;
+    }
+
+    .result-desc {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    /* 6. БЛОК 4 (КЕЙСЫ / КОМАНДА) */
+    .bloc4 {
+        padding: 40px 15px;
+        margin-top: 0;
+    }
+
+    .title-bloc4 {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    .cases-container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .case-item,
+    .case-item-center {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0;
+        transform: none; /* Сброс сдвига центральной карточки */
+    }
+
+    .case-img,
+    .case-img-large {
+        width: 220px;
+        height: 220px;
+    }
+
+    .case-name {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .case-text,
+    .case-result {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    /* 7. БЛОК 5 (ТАРИФЫ) */
+    .bloc5 {
+        padding: 40px 15px;
+    }
+
+    .title-bloc5 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .rates-container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0;
+    }
+
+    .rate-column {
+        width: 100%;
+    }
+
+    .rate-header h3 {
+        font-size: 22px;
+    }
+
+    .rate-subtitle {
+        font-size: 14px;
+        min-height: auto;
+    }
+
+    .rate-card,
+    .rate-card.card-small,
+    .rate-card.card-large {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    /* 8. БЛОК 6 (КОНТАКТЫ И ФОРМА) */
+    .bloc6 {
+        padding: 40px 15px;
+    }
+
+    .title-bloc6 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .contacts-container {
+        flex-direction: column;
+        gap: 35px;
+        padding: 0;
+    }
+
+    .contacts-left,
+    .contacts-right {
+        width: 100%;
+    }
+
+    .contact-photo-wrapper {
+        max-width: 100%;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px; /* Защита от автозума на iOS при клике */
+    }
+
+    .form-submit-btn {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    /* 9. ФУТЕР */
+    .footer-bottom-bar {
+        padding: 20px 15px;
+    }
+
+    .logo-img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+}
+
+
+/* =========================================================
+   ПОЛНЫЙ АДАПТИВ ДЛЯ ТЕЛЕФОНОВ
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================================
+       ОБЩИЕ НАСТРОЙКИ
+       ===================================================== */
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    [id] {
+        scroll-margin-top: 130px;
+    }
+
+
+    /* =====================================================
+       1. HEADER
+       ===================================================== */
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: none;
+
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+
+        padding: 10px 15px;
+
+        box-sizing: border-box;
+    }
+
+    .headernad {
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+
+        padding: 0;
+        box-sizing: border-box;
+
+        font-size: 16px;
+    }
+
+    .LegalPartner {
+        width: auto;
+        max-width: 180px;
+        height: 30px;
+
+        object-fit: contain;
+    }
+
+    nav {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 8px 18px;
+
+        margin: 0;
+    }
+
+    nav a {
+        font-size: 15px;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    .headernad p {
+        font-size: 16px;
+    }
+
+
+    /* =====================================================
+       2. ГЛАВНЫЙ ЭКРАН
+       ===================================================== */
+
+    .golovniecran {
+        width: 100%;
+        max-width: 100%;
+
+        min-height: 100vh;
+        height: auto;
+
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        background-size: cover;
+        background-position: center;
+
+        padding-top: 120px;
+
+        box-sizing: border-box;
+    }
+
+    .steclofon-left {
+        width: 100%;
+
+        min-height: calc(100vh - 120px);
+
+        padding: 35px 20px 30px;
+
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        backdrop-filter: blur(8px);
+    }
+
+    .title {
+        width: 100%;
+
+        font-size: clamp(32px, 9vw, 48px);
+
+        line-height: 1.1;
+
+        margin: 0 0 20px 0;
+
+        text-align: left;
+
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    .textgol {
+        width: 100%;
+
+        font-size: clamp(18px, 5vw, 24px);
+
+        line-height: 1.4;
+
+        margin: 0 0 30px 0;
+
+        text-align: left;
+
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    .button1 {
+        width: 100%;
+        max-width: 100%;
+
+        height: 60px;
+
+        margin-top: auto;
+
+        border-radius: 18px;
+
+        font-size: 18px;
+
+        box-sizing: border-box;
+    }
+
+    .steclofon-left .button1 {
+        margin-top: auto;
+    }
+
+
+    /* =====================================================
+       3. БЛОК 2
+       ===================================================== */
+
+    .bloc2 {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+    }
+
+    .vverxbloc1,
+    .vverxbloc2 {
+        width: 100%;
+
+        height: auto;
+        min-height: 180px;
+
+        padding: 35px 20px;
+
+        box-sizing: border-box;
+
+        background-position: center;
+    }
+
+    .textbloc2 {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: clamp(18px, 5vw, 24px);
+
+        line-height: 1.4;
+
+        text-align: center;
+
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       4. КАРТОЧКИ БЛОКА 2
+       ===================================================== */
+
+    .blocin2bloc {
+        width: 100%;
+        max-width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin: 30px 0 0;
+
+        padding: 0 15px;
+
+        box-sizing: border-box;
+    }
+
+    .card-item {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card-title {
+        font-size: 22px;
+
+        line-height: 1.2;
+
+        margin: 0 0 12px 0;
+
+        text-align: left;
+    }
+
+    .card-content {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 20px;
+
+        border-radius: 20px;
+
+        box-sizing: border-box;
+    }
+
+    .card-text {
+        width: 100%;
+
+        font-size: 16px;
+
+        line-height: 1.45;
+
+        text-align: left;
+
+        margin: 0;
+    }
+
+    .vverxbloc3 {
+        width: 100%;
+
+        height: auto;
+        min-height: 180px;
+
+        margin-top: 50px;
+
+        padding: 35px 20px;
+
+        box-sizing: border-box;
+    }
+
+    .buttonbloc2 {
+        width: 100%;
+        max-width: 100%;
+
+        height: 60px;
+
+        border-radius: 18px;
+
+        font-size: 18px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       5. БЛОК 3
+       ===================================================== */
+
+    .bloc3 {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        padding: 45px 20px;
+
+        box-sizing: border-box;
+    }
+
+    .title-bloc3 {
+        width: 100%;
+
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        text-align: center;
+
+        margin: 0 0 35px 0;
+    }
+
+    .content-bloc3 {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 45px;
+    }
+
+    .left-col3,
+    .right-col3 {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+    .left-col3 {
+        gap: 30px;
+    }
+
+    .step-item {
+        width: 100%;
+
+        display: flex;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .step-number {
+        width: 36px;
+        min-width: 36px;
+
+        height: 36px;
+
+        font-size: 16px;
+    }
+
+    .step-text {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .step-text h3 {
+        font-size: 20px;
+
+        line-height: 1.2;
+
+        margin: 0 0 8px 0;
+    }
+
+    .step-text p {
+        font-size: 15px;
+
+        line-height: 1.45;
+
+        margin: 0;
+    }
+
+    .result-header {
+        gap: 10px;
+
+        margin-bottom: 20px;
+    }
+
+    .arrow-down {
+        width: 36px;
+        min-width: 36px;
+
+        height: 36px;
+
+        font-size: 20px;
+    }
+
+    .result-header h3 {
+        font-size: 20px;
+
+        line-height: 1.2;
+    }
+
+    .result-title {
+        font-size: 19px;
+
+        line-height: 1.3;
+
+        margin: 0 0 18px 0;
+    }
+
+    .result-desc {
+        font-size: 16px;
+
+        line-height: 1.45;
+
+        text-align: left;
+
+        margin: 0 0 25px 0;
+    }
+
+    .right-col3 .button1 {
+        width: 100%;
+
+        margin-top: 10px;
+    }
+
+
+    /* =====================================================
+       6. БЛОК 4 — КЕЙСЫ / ЛЮДИ
+       ===================================================== */
+
+    .bloc4 {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        padding: 45px 20px;
+
+        box-sizing: border-box;
+    }
+
+    .title-bloc4 {
+        width: 100%;
+
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        text-align: center;
+
+        margin: 0 0 40px 0;
+
+        padding: 0;
+    }
+
+    .cases-container {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 55px;
+    }
+
+    .case-item,
+    .case-item-center {
+        width: 100%;
+        max-width: 500px;
+
+        margin: 0;
+
+        transform: none;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .case-img,
+    .case-img-large {
+        width: min(220px, 70vw);
+        height: min(220px, 70vw);
+
+        border-radius: 50%;
+
+        object-fit: cover;
+
+        box-sizing: border-box;
+    }
+
+    .case-img-large {
+        border-width: 2px;
+    }
+
+    .lawyer-name {
+        font-size: 20px;
+
+        line-height: 1.2;
+
+        margin: 18px 0 5px;
+    }
+
+    .case-signature {
+        font-size: 21px;
+
+        margin: 0 0 15px;
+    }
+
+    .case-name {
+        width: 100%;
+
+        font-size: 20px;
+
+        line-height: 1.3;
+
+        text-align: center;
+
+        margin: 0 0 12px;
+    }
+
+    .case-text {
+        width: 100%;
+
+        font-size: 15px;
+
+        line-height: 1.5;
+
+        text-align: left;
+
+        margin: 0 0 15px;
+    }
+
+    .case-result {
+        width: 100%;
+
+        font-size: 15px;
+
+        line-height: 1.5;
+
+        text-align: left;
+
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       7. БЛОК 5 — ТАРИФЫ
+       ===================================================== */
+
+    .bloc5 {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        padding: 45px 20px 60px;
+
+        box-sizing: border-box;
+    }
+
+    .title-bloc5 {
+        width: 100%;
+
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        text-align: center;
+
+        margin: 0 0 35px 0;
+    }
+
+    .rates-container {
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 35px;
+
+        padding: 0;
+
+        box-sizing: border-box;
+    }
+
+    .rate-column {
+        width: 100%;
+        max-width: 100%;
+
+        flex: none;
+    }
+
+    .rate-header {
+        gap: 12px;
+
+        margin-bottom: 12px;
+    }
+
+    .rate-num {
+        width: 38px;
+        min-width: 38px;
+
+        height: 38px;
+
+        font-size: 15px;
+    }
+
+    .rate-header h3 {
+        font-size: 22px;
+
+        line-height: 1.2;
+    }
+
+    .rate-subtitle {
+        width: 100%;
+
+        font-size: 15px;
+
+        line-height: 1.4;
+
+        min-height: auto;
+
+        margin-bottom: 15px;
+    }
+
+    .rate-card,
+    .rate-card.card-small,
+    .rate-card.card-large {
+        width: 100%;
+
+        padding: 22px 18px;
+
+        border-radius: 20px;
+
+        box-sizing: border-box;
+    }
+
+    .content-label {
+        font-size: 19px;
+
+        line-height: 1.3;
+
+        margin-bottom: 12px;
+    }
+
+    .rate-content ul {
+        margin: 0 0 20px 0;
+
+        padding-left: 20px;
+    }
+
+    .rate-content li {
+        font-size: 16px;
+
+        line-height: 1.45;
+
+        margin-bottom: 8px;
+    }
+
+    .rate-result {
+        padding-top: 15px;
+    }
+
+    .rate-result p {
+        font-size: 16px;
+
+        line-height: 1.45;
+    }
+
+
+    /* =====================================================
+       8. БЛОК 6 — КОНТАКТЫ
+       ===================================================== */
+
+    .bloc6 {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        padding: 45px 20px 60px;
+
+        box-sizing: border-box;
+    }
+
+    .title-bloc6 {
+        width: 100%;
+
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        text-align: center;
+
+        margin: 0 0 35px 0;
+    }
+
+    .contacts-container {
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 40px;
+
+        padding: 0;
+
+        box-sizing: border-box;
+    }
+
+    .contacts-left,
+    .contacts-right {
+        width: 100%;
+        max-width: 100%;
+
+        flex: none;
+    }
+
+    .contacts-left {
+        gap: 30px;
+    }
+
+    .contact-info-list {
+        gap: 17px;
+    }
+
+    .contact-item {
+        width: 100%;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+    .contact-icon {
+        width: 28px;
+        min-width: 28px;
+
+        height: 28px;
+    }
+
+    .contact-item a {
+        min-width: 0;
+
+        font-size: 16px;
+
+        line-height: 1.3;
+
+        word-break: break-word;
+    }
+
+    .contact-photo-wrapper {
+        width: 100%;
+        max-width: 100%;
+
+        border-radius: 20px;
+
+        box-sizing: border-box;
+    }
+
+    .contact-photo {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* =====================================================
+       9. ФОРМА
+       ===================================================== */
+
+    .form-title {
+        font-size: 21px;
+
+        line-height: 1.3;
+
+        margin: 0 0 25px 0;
+    }
+
+    .feedback-form {
+        width: 100%;
+
+        gap: 18px;
+    }
+
+    .form-group {
+        width: 100%;
+
+        gap: 7px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+
+        line-height: 1.3;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+
+        padding: 12px 14px;
+
+        border-radius: 12px;
+
+        font-size: 16px;
+
+        box-sizing: border-box;
+    }
+
+    .form-group textarea {
+        min-height: 130px;
+
+        resize: vertical;
+    }
+
+    .form-submit-btn {
+        width: 100%;
+
+        min-height: 55px;
+
+        margin-top: 5px;
+
+        padding: 12px 15px;
+
+        border-radius: 12px;
+
+        font-size: 18px;
+    }
+
+
+    /* =====================================================
+       10. FOOTER
+       ===================================================== */
+
+    .footer-bottom-bar {
+        width: 100%;
+
+        padding: 20px 15px;
+
+        box-sizing: border-box;
+    }
+
+    .logo-container {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+
+        letter-spacing: 1px;
+    }
+
+    .logo-img {
+        width: 100%;
+        max-width: 320px;
+
+        height: auto;
+    }
+}
+
+
+/* =========================================================
+   ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ
+   360px И МЕНЬШЕ
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .headernad {
+        gap: 7px;
+    }
+
+    nav {
+        gap: 6px 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .golovniecran {
+        padding-top: 115px;
+    }
+
+    .steclofon-left {
+        min-height: calc(100vh - 115px);
+
+        padding: 25px 15px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .textgol {
+        font-size: 17px;
+    }
+
+    .button1 {
+        height: 55px;
+
+        font-size: 17px;
+    }
+
+    .textbloc2 {
+        font-size: 17px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-text {
+        font-size: 15px;
+    }
+
+    .title-bloc3,
+    .title-bloc4,
+    .title-bloc5,
+    .title-bloc6 {
+        font-size: 27px;
+    }
+
+    .case-img,
+    .case-img-large {
+        width: 190px;
+        height: 190px;
+    }
+
+    .rate-header h3 {
+        font-size: 20px;
+    }
+
+    .contact-item a {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .golovniecran {
+        min-height: auto;
+        height: auto;
+        padding-top: 120px;
+    }
+
+    .steclofon-left {
+        min-height: auto;
+        padding: 100px 20px 45px 20px;
+    }
+
+    .title {
+        margin-bottom: 25px;
+    }
+
+    .textgol {
+        margin-bottom: 45px;
+    }
+
+    .steclofon-left .button1 {
+        margin-top: 20px;
+        width: 100%;
+        height: 70px;
+    }
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    height: auto; /* Высота подстраивается под содержимое */
+    padding: 10px 0;
+  }
+
+  .headernad {
+    padding: 0 15px; /* Уменьшаем боковые поля, чтобы дать место контенту */
+    flex-direction: column; /* Размещаем логотип и навигацию друг под другом */
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap; /* Разрешаем ссылкам переноситься на новую строку */
+    justify-content: center;
+    gap: 10px 15px; /* Компактный отступ между ссылками */
+    margin-left: 0; /* Убираем отрицательный margin */
+  }
+
+  nav a {
+    font-size: 13px; /* Уменьшаем размер шрифта для мобильных */
+  }
+
+  .LegalPartner {
+    height: 30px; /* Слегка уменьшаем логотип */
+  }
+}
+
+
